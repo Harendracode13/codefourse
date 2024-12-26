@@ -3,23 +3,17 @@
 #include <algorithm>
 using namespace std;
 
-bool canSortWithReverses(int n, int k, vector<int>& arr) {
+bool solve(int n, int k, vector<int>& arr) {
     vector<int> sortedArr = arr;
-    sort(sortedArr.begin(), sortedArr.end());
 
-    for (int i = 0; i < k; ++i) {
-        vector<int> originalSegment, sortedSegment;
-        for (int j = i; j < n; j += k) {
-            originalSegment.push_back(arr[j]);
-            sortedSegment.push_back(sortedArr[j]);
-        }
-      
-        sort(originalSegment.begin(), originalSegment.end());
-        if (originalSegment != sortedSegment) {
-            return false;
-        }
-    }
+  if(k==1 && !is_sorted(sortedArr.begin(),sortedArr.end()))
+  {
+    return false;
+  }
+  else
+  {
     return true;
+  }
 }
 
 int main() {
@@ -32,7 +26,7 @@ int main() {
         for (int i = 0; i < n; ++i) {
             cin >> arr[i];
         }
-        cout << (canSortWithReverses(n, k, arr) ? "YES" : "NO") << endl;
+        cout << (solve(n, k, arr) ? "YES" : "NO") << endl;
     }
     return 0;
 }
