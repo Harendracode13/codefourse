@@ -1,90 +1,46 @@
 /*
-There is a road, which can be represented as a number line. You are located in the point 0
- of the number line, and you want to travel from the point 0
- to the point x
-, and back to the point 0
-.
+There is a road, which can be represented as a number line. You are located in the point 0 of the number line, and you want to travel from the point 0 to the point x,and back to the point 0.
+You travel by car, which spends 1 liter of gasoline per 1 unit of distance travelled. When you start at the point 0, your car is fully fueled (its gas tank contains the maximum possible amount of fuel).
 
-You travel by car, which spends 1
- liter of gasoline per 1
- unit of distance travelled. When you start at the point 0
-, your car is fully fueled (its gas tank contains the maximum possible amount of fuel).
+There are n gas stations, located in points a1,a2,…,an. When you arrive at a gas station, you fully refuel your car. Note that you can refuel only at gas stations, and there are no gas stations in points 0 11and x.
 
-There are n
- gas stations, located in points a1,a2,…,an
-. When you arrive at a gas station, you fully refuel your car. Note that you can refuel only at gas stations, and there are no gas stations in points 0
- and x
-.
-
-You have to calculate the minimum possible volume of the gas tank in your car (in liters) that will allow you to travel from the point 0
- to the point x
- and back to the point 0
-.
+You have to calculate the minimum possible volume of the gas tank in your car (in liters) that will allow you to travel from the point 0 to the point x and back to the point 0.
 
 Input
-The first line contains one integer t
- (1≤t≤1000
-) — the number of test cases.
+The first line contains one integer t (1≤t≤1000 ) — the number of test cases.
 
 Each test case consists of two lines:
 
-the first line contains two integers n
- and x
- (1≤n≤50
-; 2≤x≤100
-);
-the second line contains n
- integers a1,a2,…,an
- (0<a1<a2<⋯<an<x
-).
+the first line contains two integers n and x(1≤n≤50; 2≤x≤100);
+the second line contains n integers a1,a2,…,an  (0<a1<a2<⋯<an<x).
 */
+//solution
 
-#include<iostream>
-#include<vector>
 #include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
-
-int solve(int n,int x,vector<int> &arr){
-     int a=x;
-     vector <int> array=arr;
-	 int temp=(a-array.back())*2;
-	 if(n==1 )
-	 {
-		if(temp>array.front())
-		{
-		return temp;
-		}
-		else{
-			return array.front();
-		}
-	 }
-	 else{
-		vector<int> v;
-		for(int i=0;i<n-1;i++)
-		{
-            int t=array[i+1]-array[i];
-			v.push_back(t);
-		}
-		v.push_back(temp);
-		int max = *max_element(v.begin(), v.end());
-		return max;
-	 }
-}
-
 int main()
 {
-	int t;
-	int n,x;
+	int t,n,x;
 	cin>>t;
 	while(t--)
 	{
 		cin>>n>>x;
-		vector<int> arr(n);
+		vector<int> arr;
+		arr.push_back(0);
         for(int i=0;i<n;i++)
 		{
-			cin>>arr[i];
+			int k;cin>>k;
+			arr.push_back(k);
 		}
-		cout<<solve(n,x,arr)<<endl;
+		 int ans =0;
+		for(int i=1;i<arr.size();i++)
+		{
+            ans=max(ans,arr[i]-arr[i-1]);
+		}
+		int d=(x-arr.back())*2;
+		ans=max(ans,d);
+		cout<<ans<<endl;
 	}
 	return 0;
 }
