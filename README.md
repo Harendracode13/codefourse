@@ -27,6 +27,16 @@ https://codeforces.com/problemset/problem/1899/A
 https://codeforces.com/problemset/problem/1896/A
 ```
 
+### Doremy's Paint
+```bash
+https://codeforces.com/problemset/problem/1890/A
+```
+
+### Don't Try to Count
+```bash
+https://codeforces.com/problemset/problem/1881/A
+```
+
 # 900 Rateing Problem
 
 ### A. Forked!
