@@ -37,6 +37,12 @@ https://codeforces.com/problemset/problem/1890/A
 https://codeforces.com/problemset/problem/1881/A
 ```
 
+
+###  How Much Does Daytona Cost?
+```bash
+https://codeforces.com/problemset/problem/1878/A
+```
+
 # 900 Rateing Problem
 
 ### A. Forked!
