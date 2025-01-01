@@ -37,10 +37,19 @@ https://codeforces.com/problemset/problem/1890/A
 https://codeforces.com/problemset/problem/1881/A
 ```
 
-
 ###  How Much Does Daytona Cost?
 ```bash
 https://codeforces.com/problemset/problem/1878/A
+```
+
+###  Goals of Victory
+```bash
+https://codeforces.com/problemset/problem/1877/A
+```
+
+###  Traget Practice 
+```bash
+https://codeforces.com/problemset/problem/1873/C
 ```
 
 # 900 Rateing Problem
