@@ -52,6 +52,11 @@ https://codeforces.com/problemset/problem/1877/A
 https://codeforces.com/problemset/problem/1873/C
 ```
 
+###   Ambitious Kid 
+```bash
+https://codeforces.com/problemset/problem/1866/A
+```
+
 # 900 Rateing Problem
 
 ### A. Forked!
