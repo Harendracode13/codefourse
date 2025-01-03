@@ -57,6 +57,11 @@ https://codeforces.com/problemset/problem/1873/C
 https://codeforces.com/problemset/problem/1866/A
 ```
 
+### button
+```bash
+https://codeforces.com/problemset/problem/1858/A
+```
+
 # 900 Rateing Problem
 
 ### A. Forked!
