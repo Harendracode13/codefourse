@@ -62,6 +62,28 @@ https://codeforces.com/problemset/problem/1866/A
 https://codeforces.com/problemset/problem/1858/A
 ```
 
+### united We Stand
+```bash
+https://codeforces.com/problemset/problem/1859/A
+```
+
+### Sequence Game
+```bash
+https://codeforces.com/problemset/problem/1862/B
+```
+
+
+### Array Coloring
+```bash
+https://codeforces.com/problemset/problem/1857/A
+```
+
+
+### Destroing
+```bash
+https://codeforces.com/problemset/problem/1853/A
+```
+
 # 900 Rateing Problem
 
 ### A. Forked!
