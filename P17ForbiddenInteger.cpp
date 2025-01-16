@@ -1,54 +1,64 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 void solve()
 {
-	int n,k,x;
-	cin>>n>>k>>x;
-	int remin =n%k;
-	   int divi=n/k;
-	   int ans =divi;
+	int n, k, x;
+	cin >> n >> k >> x;
 
-	 if (x == 1 && k == 1) {
-        cout << "NO\n";
-        return;
-    }
-
-    if (x == 1 && k == 2 && n % 2 != 0) {
-        cout << "NO\n";
-        return;
-    }
-	else{
-		cout<<"Yes\n";
-       if(x==1){
-	   cout<<ans<<"\n";
-	    for(int i=0;i<divi;i++)
-	   {
-		cout<<k<<" ";
-	   }
-	   }
-	   else{
-		  cout<<n<<"\n";
-		 for(int i=0;i<n;i++)
-	   {
-		cout<<1<<" ";
-	   }
-	 
-	   }
-	   
-	  
-	   cout<<"\n";
+	if (x != 1)
+	{
+		cout << "YES\n";
+		cout << n << "\n";
+		for (int i = 0; i < n; i++)
+		{
+			cout << 1 << " ";
+		}
+		cout << "\n";
+		return;
 	}
-	return ;
+	else
+	{
+		if (k == 1)
+		{
+			cout << "NO\n";
+		}
+		else if (n % 2 == 0)
+		{
+
+			cout << "YES\n";
+			cout << n / 2 << "\n";
+			for (int i = 0; i < n / 2; i++)
+			{
+				cout << 2 << " ";
+			}
+			cout << "\n";
+		}
+		else
+		{
+			if (k >= 3)
+			{
+				cout << "YES\n";
+				cout << n / 2 << "\n";
+				for (int i = 0; i < n / 2 - 1; i++)
+				{
+					cout << 2 << "\n";
+				}
+				cout << 3 << "\n";
+			}
+			else{
+				cout<<"NO\n";
+			}
+		}
+	}
 }
 
 int main()
 {
 	int t;
-	cin>>t;
+	cin >> t;
 	while (t--)
 	{
 		solve();
 	}
-	
 }
