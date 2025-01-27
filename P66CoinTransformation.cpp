@@ -9,14 +9,12 @@ int main()
 	{
 		long long n;
 		cin>>n;
-
-		long long ans=n/5;
-		if(n%5!=0)
-		{
-			cout<<ans+1<<"\n";
-		}
-		else{
-			cout<<ans<<"\n";
-		}
+       long long ans=1;
+          while(n>3)
+		  {
+			ans=ans*2;
+			n=n/4;
+		  }
+		  cout<<ans<<"\n";
 	}
 }
