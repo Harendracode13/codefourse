@@ -10,9 +10,8 @@ int main()
 	long long n,m ,r,c;
 	cin>>n>>m>>r>>c;
 
-	long long ans=2*m+(m-1)*(n-r)+(m-c);
-
+	long long ans=(n-r)*m+(m-c)+(n-r)*(m-1);
 	cout<<ans<<"\n";
 	}
 	return 0;
-}
+} 
